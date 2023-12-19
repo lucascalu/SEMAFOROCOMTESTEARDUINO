@@ -1,0 +1,65 @@
+int val;
+void setup()
+{ 
+ pinMode(1, OUTPUT);//VM1
+ pinMode(2, OUTPUT);//AM1
+ pinMode(3, OUTPUT);//VD1
+ pinMode(4, OUTPUT);//VM2
+ pinMode(5, OUTPUT);//AM2
+ pinMode(6, OUTPUT);//VD2
+ pinMode(0, INPUT);	  
+}
+
+void loop()
+{   val= digitalRead(0);
+    
+if(val == HIGH) {
+  digitalWrite(1, HIGH);
+  digitalWrite(2, LOW);
+  digitalWrite(3, LOW);
+  digitalWrite(4, LOW);
+  digitalWrite(5, LOW);
+  digitalWrite(6, HIGH);
+  delay(1000);
+  
+  digitalWrite(1, HIGH);
+  digitalWrite(2, LOW);
+  digitalWrite(3, LOW);
+  digitalWrite(4, LOW);
+  digitalWrite(5, HIGH);
+  digitalWrite(6, LOW);
+  delay(1000);
+  
+  digitalWrite(1, LOW);
+  digitalWrite(2, LOW);
+  digitalWrite(3, HIGH);
+  digitalWrite(4, HIGH);
+  digitalWrite(5, LOW);
+  digitalWrite(6, LOW);
+  delay(1000);
+  
+  digitalWrite(1, LOW);
+  digitalWrite(2, HIGH);
+  digitalWrite(3, LOW);
+  digitalWrite(4, HIGH);
+  digitalWrite(5, LOW);
+  digitalWrite(6, LOW);
+  delay(1000);
+    
+  
+}
+ 
+ if(val == LOW){
+ 
+  digitalWrite(1, HIGH);
+  digitalWrite(2, HIGH);
+  digitalWrite(3, HIGH);
+  digitalWrite(4, HIGH);
+  digitalWrite(5, HIGH);
+  digitalWrite(6, HIGH);
+  delay(1000);
+ }
+ 
+ delay(1000);
+ } 
+ 
